@@ -30,17 +30,28 @@
   <style>
   .resume-img {
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center if parent has height */
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .resume-img img {
-  height: 1000px;
-  width: auto; /* keeps aspect ratio */
-  object-fit: contain; /* ensures image fits nicely */
+  height: 1000px; /* big on large screens */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
+
+/* 📱 Mobile optimization */
+@media (max-width: 768px) {
+  .resume-img img {
+    height: auto;    /* scale naturally */
+    width: 100%;     /* take full width of screen */
+    max-height: 90vh; /* fit within screen height */
+  }
+}
+
 
   #certificates {
     padding: 60px 20px;
@@ -592,7 +603,7 @@
 
     <section id="certificate">
       <div class="container" style="text-align: center;">
-        <h2>Certificates</h2>
+        <h2>Resume & Certificates</h2>
         <p>Here are some of my certifications that highlight my skills and continuous learning.</p>
 
         <div class="cert-grid">
