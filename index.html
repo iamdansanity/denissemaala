@@ -28,6 +28,20 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
+  .resume-img {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center if parent has height */
+  text-align: center;
+  width: 100%;
+}
+
+.resume-img img {
+  height: 1000px;
+  width: auto; /* keeps aspect ratio */
+  object-fit: contain; /* ensures image fits nicely */
+}
+  
   #certificates {
     padding: 60px 20px;
     background: #f7f8fc;
@@ -603,6 +617,10 @@
           </div>
         </div>
       </div>
+        <div class="resume-img">
+          <img src="assets/img/resume.jpg" alt="Resume">
+        </div>
+
     </section>
 
     <!-- Contact Section -->
